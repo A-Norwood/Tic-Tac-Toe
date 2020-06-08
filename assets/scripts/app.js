@@ -9,5 +9,6 @@ const credsEvent = require('./events.js')
 $(() => {
   $('#sign-up').on('submit', credsEvent.onSignUp)
   $('#sign-in').on('submit', credsEvent.onSignIn)
-  // $('#sign-out').on('submit', credsEvent.onSignOut)
+  $('#change-pw').on('submit', credsEvent.onChangePw)
+  $('#sign-out').on('submit', credsEvent.onSignOut)
 })

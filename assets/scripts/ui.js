@@ -1,3 +1,5 @@
+const store = require('./store')
+
 const signUpSuccess = function (response) {
   console.log(response)
   $('form').trigger('reset')
@@ -15,6 +17,7 @@ const signInSuccess = function (response) {
   $('form').trigger('reset')
   $('#sign-up-content').text('Signed in ' + response.user.email)
   $('#sign-up-content').show()
+  store.user = response.user
 }
 
 const signInFailure = function (response) {
@@ -23,14 +26,34 @@ const signInFailure = function (response) {
   $('#sign-up-content').show()
 }
 
-// const signOutSuccess = function (reponse) {
-//   $('#sign-up-content').text('Sign out successful')
-// }
+const changePwSuccess = function () {
+  $('form').trigger('reset')
+  $('#change-pw').text('Password changed successfully')
+  $('#change-pw').removeClass()
+  $('#change-pw').addClass('success')
+}
+
+const changePwFailure = function () {
+  $('form').trigger('reset')
+  $('#change-pw').text('Password change failed')
+  $('#change-pw').removeClass()
+  $('#change-pw').addClass('failure')
+}
+
+const signOutSuccess = function () {
+  $('#sign-out').text('Signed Out successfully')
+  $('#sign-out').removeClass()
+  $('#sign-out').addClass('success')
+  $('form').trigger('reset')
+  store.user = null
+}
 
 module.exports = {
   signUpSuccess,
   signUpFailure,
   signInSuccess,
-  signInFailure
-  // signOutSuccess
+  signInFailure,
+  changePwSuccess,
+  changePwFailure,
+  signOutSuccess
 }

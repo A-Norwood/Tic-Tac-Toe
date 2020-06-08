@@ -27,15 +27,27 @@ const onSignIn = function (event) {
     .catch(ui.signInFailure)
 }
 
-// const onSignOut = function (event) {
-//   event.preventDefault()
-//
-//   api.signOut()
-//     .then(ui.signOutSuccess)
-//     .catch(ui.signOutFailure)
-// }
+const onChangePw = function (event) {
+  event.preventDefault()
+
+  const form = event.target
+  const data = getFormFields(form)
+
+  api.changePw(data)
+    .then(ui.changePwSuccess)
+    .catch(ui.changePwFailure)
+}
+
+const onSignOut = function (event) {
+  event.preventDefault()
+
+  api.signOut()
+    .then(ui.signOutSuccess)
+    .catch(ui.signOutFailure)
+}
 module.exports = {
   onSignUp,
-  onSignIn
-  // onSignOut
+  onSignIn,
+  onChangePw,
+  onSignOut
 }
