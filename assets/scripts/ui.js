@@ -19,6 +19,7 @@ const signInSuccess = function (response) {
   $('#sign-up-content').show()
   $('.hidden').removeClass()
   $('.show').hide()
+  $('#new-game').show()
   store.user = response.user
 }
 
@@ -49,6 +50,7 @@ const signOutSuccess = function () {
   $('#new-game').addClass('hidden')
   $('#change-pw').addClass('hidden')
   $('.show').show()
+  $('.row').hide()
   store.user = null
 }
 

@@ -5,6 +5,7 @@ const createSuccess = function (response) {
   $('#new-game').show()
   $('#new-game').removeClass()
   $('#new-game').addClass('success')
+  $('.row').show()
 }
 const createFailure = function () {
   $('#new-game').text('Create Game failed!')
