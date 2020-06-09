@@ -17,6 +17,8 @@ const signInSuccess = function (response) {
   $('form').trigger('reset')
   $('#sign-up-content').text('Signed in ' + response.user.email)
   $('#sign-up-content').show()
+  $('.hidden').removeClass()
+  $('.show').hide()
   store.user = response.user
 }
 
@@ -41,11 +43,19 @@ const changePwFailure = function () {
 }
 
 const signOutSuccess = function () {
-  $('#sign-out').text('Signed Out successfully')
+  $('#sign-out').text('Signed Out Successfully')
   $('#sign-out').removeClass()
   $('#sign-out').addClass('success')
-  $('form').trigger('reset')
+  $('#new-game').addClass('hidden')
+  $('#change-pw').addClass('hidden')
+  $('.show').show()
   store.user = null
+}
+
+const signOutFailure = function () {
+  $('#sign-out').text('Signed Out Failed')
+  $('#sign-out').removeClass()
+  $('#sign-out').addClass('failure')
 }
 
 module.exports = {
@@ -55,5 +65,6 @@ module.exports = {
   signInFailure,
   changePwSuccess,
   changePwFailure,
-  signOutSuccess
+  signOutSuccess,
+  signOutFailure
 }

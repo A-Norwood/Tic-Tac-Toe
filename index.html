@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>Tic-Tac-Toe</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -14,6 +14,7 @@
     <body>
       <h1>Tic-Tac-Toe</h1>
       <section>
+        <div class="show">
         <h3>Sign Up</h3>
         <form id="sign-up">
           <input placeholder="Enter Email" name="credentials[email]" type="email" required>
@@ -21,21 +22,24 @@
           <input placeholder="Confirm Password" name="credentials[password_confirmation]" type="password" required>
           <button type="submit">Sign Up</button>
         </form>
+      </div>
       </section>
       <p id="sign-up-content">
       </p>
 
       <section>
+        <div class="show">
         <h3>Sign In</h3>
         <form id="sign-in">
           <input placeholder="Enter Email" name="credentials[email]" type="email" required>
           <input placeholder="Password Here" name="credentials[password]" type="password" required>
           <button type="submit">Sign In</button>
         </form>
+      </div>
       </section>
 
       <section>
-      <h3>Change Password</h3>
+        <div class="hidden">
       <form id="change-pw">
         <input placeholder="Old Password" type="password"
         name="passwords[old]" required>
@@ -43,15 +47,23 @@
         name="passwords[new]" required>
         <button type="submit">Change Password</button>
       </form>
+    </div>
     </section>
 
-      <section>
-        <h3>Sign Out</h3>
-        <form id="sign-out">
-          <button type="submit">Sign Out</button>
-        </form>
-      </section>
+    <section>
+      <div class="hidden">
+      <form id="sign-out">
+        <button type="submit">Sign Out</button>
+      </form>
+    </div>
+    </section>
+
+    <section>
+    <div class="hidden">
+      <button id="new-game" type="button">New Game</button>
+    </div>
+    </section>
 
 
-    </body>
+  </body>
 </html>
