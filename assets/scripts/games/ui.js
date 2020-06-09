@@ -1,9 +1,7 @@
 // const store = require('./store')
 
 const createSuccess = function (response) {
-  $('#new-game').text('Create Game success!')
-  $('#new-game').show()
-  $('#new-game').removeClass()
+  $('.game-content').html('Create Game success!')
   $('#new-game').addClass('success')
   $('.row').show()
 }
@@ -12,7 +10,23 @@ const createFailure = function () {
   $('#new-game').show()
 }
 
+const updateGameSuccess = function () {
+  $('.updateGame').text('Show letter')
+  $('.updateGame').show()
+  $('.updateGame').removeClass()
+  $('.updateGame').addClass('success')
+}
+
+const updateGameFailure = function () {
+  $('.updateGame').text('Show letter failed')
+  $('.updateGame').show()
+  $('.updateGame').removeClass()
+  $('.updateGame').addClass('failure')
+}
+
 module.exports = {
   createSuccess,
-  createFailure
+  createFailure,
+  updateGameSuccess,
+  updateGameFailure
 }
