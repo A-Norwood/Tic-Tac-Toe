@@ -44,13 +44,14 @@ const changePwFailure = function () {
 }
 
 const signOutSuccess = function () {
-  $('#sign-out').text('Signed Out Successfully')
+  $('#sign-out').text('Signed out successfully. Please sign in again to play.')
   $('#sign-out').removeClass()
   $('#sign-out').addClass('success')
   $('#new-game').addClass('hidden')
   $('#change-pw').addClass('hidden')
   $('.show').show()
   $('.row').hide()
+  $('#sign-up-content').hide()
   store.user = null
 }
 

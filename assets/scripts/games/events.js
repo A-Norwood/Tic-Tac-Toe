@@ -5,6 +5,7 @@ const store = require('../store.js')
 const getFormFields = require('../../../lib/get-form-fields.js')
 
 const onCreateGame = function (event) {
+  // console.log(user.token)
   event.preventDefault()
 
   api.createGame()
@@ -14,17 +15,26 @@ const onCreateGame = function (event) {
 
 let currentPlayer = 'X'
 
-const onUpdateGame = function () {
-  const form = event.target
-  const data = getFormFields(form)
+const onUpdateGame = function (event) {
+  event.preventDefault()
+  // console.log(event.target.id)
+  if (store.game.cells[event.target.id] === 'X' || store.game.cells[event.target.id] === 'O') {
+    alert('Invalid Move!')
+  }
 
-  $(form).text(currentPlayer)
+  // updates game cells using current index
+  store.game.cells[event.target.id] = currentPlayer
+
+  if ($(event.target).is(':empty')) {
+    $(event.target).text(currentPlayer)
+  }
   if (currentPlayer === 'X') {
     currentPlayer = 'O'
   } else {
     currentPlayer = 'X'
   }
-  api.updateGame(data)
+
+  api.updateGame()
     .then(ui.updateGameSuccess)
     .catch(ui.updateGameFailure)
 }

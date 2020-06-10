@@ -1,9 +1,10 @@
-const config = require('../config.js')
-const store = require('../store.js')
+const config = require('./../config.js')
+const store = require('./../store.js')
 
 // const getFormFields = require('../../lib/get-form-fields.js')
 
 const createGame = function () {
+  console.log(store.user.token)
   return $.ajax({
     url: config.apiUrl + '/games',
     method: 'POST',
@@ -15,9 +16,10 @@ const createGame = function () {
 }
 
 const updateGame = function () {
+  console.log(store)
   return $.ajax({
+    url: config.apiUrl + '/games/' + store.game._id,
     method: 'PATCH',
-    url: config.apiUrl + '/games' + store.game._id,
     headers: {
       Authorization: 'Token token=' + store.user.token
     },
@@ -25,7 +27,7 @@ const updateGame = function () {
       game: {
         cell: {
           index: 0,
-          value: 'x'
+          value: 'X'
         },
         over: false
       }
