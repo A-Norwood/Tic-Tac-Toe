@@ -8,9 +8,10 @@
   display: block;
 }
 
-// .hide-board {
-//   display: none;
-// }
+.message {
+  display: flex;
+  justify-content: center;
+}
 
 .box {
   background-color: #e6e6fa;
