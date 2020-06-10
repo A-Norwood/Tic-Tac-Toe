@@ -4,6 +4,7 @@ const createSuccess = function (response) {
   $('.game-content').html('Create Game success!')
   $('#new-game').addClass('success')
   $('.row').show()
+  $('.message').text('It is now X\'s turn')
   store.game = response.game
 }
 const createFailure = function () {

@@ -13,6 +13,11 @@
   justify-content: center;
 }
 
+.invalid-move {
+  display: flex;
+  justify-content: center;
+}
+
 .box {
   background-color: #e6e6fa;
   border: 1px solid #db7093;
