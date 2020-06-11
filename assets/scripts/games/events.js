@@ -14,13 +14,13 @@ const onCreateGame = function (event) {
 }
 
 let currentPlayer = 'X'
-let gameOver = 'false'
+let gameOver = false
 let totalMoves = 0
 
 const onUpdateGame = function (event) {
   event.preventDefault()
   // console.log(event.target.id)
-  if (gameOver === 'false' && totalMoves < 9) {
+  if (gameOver === false && totalMoves < 9) {
     if (store.game.cells[event.target.id] === 'X' || store.game.cells[event.target.id] === 'O') {
       return $('.invalid-move').text('Invalid Move!').fadeOut(4000)
     }
@@ -48,31 +48,30 @@ const onUpdateGame = function (event) {
   }
 }
 
-
 const winner = function () {
   if (store.game.cells[0] === store.game.cells[1] && store.game.cells[1] === store.game.cells[2] && store.game.cells[0] !== '') {
-    gameOver = 'true'
+    gameOver = true
     return $('.message').text('Winner is ' + store.game.cells[0])
   } else if (store.game.cells[3] === store.game.cells[4] && store.game.cells[4] === store.game.cells[5] && store.game.cells[3] !== '') {
-    gameOver = 'true'
+    gameOver = true
     return $('.message').text('Winner is ' + store.game.cells[3])
   } else if (store.game.cells[6] === store.game.cells[7] && store.game.cells[7] === store.game.cells[8] && store.game.cells[6] !== '') {
-    gameOver = 'true'
+    gameOver = true
     return $('.message').text('Winner is ' + store.game.cells[6])
   } else if (store.game.cells[0] === store.game.cells[4] && store.game.cells[4] === store.game.cells[8] && store.game.cells[0] !== '') {
-    gameOver = 'true'
+    gameOver = true
     return $('.message').text('Winner is ' + store.game.cells[0])
   } else if (store.game.cells[2] === store.game.cells[4] && store.game.cells[4] === store.game.cells[6] && store.game.cells[2] !== '') {
-    gameOver = 'true'
+    gameOver = true
     return $('.message').text('Winner is ' + store.game.cells[2])
   } else if (store.game.cells[0] === store.game.cells[3] && store.game.cells[3] === store.game.cells[6] && store.game.cells[0] !== '') {
-    gameOver = 'true'
+    gameOver = true
     return $('.message').text('Winner is ' + store.game.cells[0])
   } else if (store.game.cells[1] === store.game.cells[4] && store.game.cells[4] === store.game.cells[7] && store.game.cells[1] !== '') {
-    gameOver = 'true'
+    gameOver = true
     return $('.message').text('Winner is ' + store.game.cells[1])
   } else if (store.game.cells[2] === store.game.cells[5] && store.game.cells[5] === store.game.cells[8] && store.game.cells[2] !== '') {
-    gameOver = 'true'
+    gameOver = true
     return $('.message').text('Winner is ' + store.game.cells[2])
   }
   let isATie = true
@@ -82,7 +81,7 @@ const winner = function () {
     }
   }
   if (isATie === true) {
-    gameOver = 'true'
+    gameOver = true
     return $('.message').text('Its a tie!')
   }
 }
@@ -90,5 +89,4 @@ const winner = function () {
 module.exports = {
   onCreateGame,
   onUpdateGame
-  // winner
 }

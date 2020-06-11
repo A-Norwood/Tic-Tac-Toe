@@ -5,7 +5,21 @@ const createSuccess = function (response) {
   $('#new-game').addClass('success')
   $('.row').show()
   $('.message').text('It is now X\'s turn')
+  $('#0').text('')
+  $('#1').text('')
+  $('#2').text('')
+  $('#3').text('')
+  $('#4').text('')
+  $('#5').text('')
+  $('#6').text('')
+  $('#7').text('')
+  $('#8').text('')
+
   store.game = response.game
+  console.log(store.game.cells)
+  // for (let i = 0; i < store.game.cells.length; i++) {
+  //   store.game.cells[i] = ''
+  // }
 }
 const createFailure = function () {
   $('#new-game').text('Create Game failed!')

@@ -44,7 +44,7 @@ const changePwFailure = function () {
 }
 
 const signOutSuccess = function () {
-  $('#sign-out').text('Signed out successfully. Please sign in again to play.')
+  $('#sign-out').text('Signed out successfully. Please sign in again to play.').fadeOut(6000)
   $('#sign-out').removeClass()
   $('#sign-out').addClass('success')
   $('#new-game').addClass('hidden')
@@ -52,6 +52,7 @@ const signOutSuccess = function () {
   $('.show').show()
   $('.row').hide()
   $('#sign-up-content').hide()
+  $('.message').hide()
   store.user = null
 }
 
