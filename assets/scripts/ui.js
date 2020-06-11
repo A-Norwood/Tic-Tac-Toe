@@ -20,6 +20,7 @@ const signInSuccess = function (response) {
   $('.hidden').removeClass()
   $('.show').hide()
   $('#new-game').show()
+  $('#sign-out-stuff').show()
   store.user = response.user
 }
 
@@ -53,7 +54,12 @@ const signOutSuccess = function () {
   $('.row').hide()
   $('#sign-up-content').hide()
   $('.message').hide()
-  store.user = null
+  $('.game-content').hide()
+  console.log(store)
+  // store.user = null
+  // store.game = null
+  // store.store = null
+  console.log(store)
 }
 
 const signOutFailure = function () {

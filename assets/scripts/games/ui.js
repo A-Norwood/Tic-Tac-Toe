@@ -1,7 +1,7 @@
 const store = require('./../store')
 
 const createSuccess = function (response) {
-  $('.game-content').html('Create Game success!')
+  $('.game-content').html('Create Game success!').fadeOut(10000)
   $('#new-game').addClass('success')
   $('.row').show()
   $('.message').text('It is now X\'s turn')
@@ -17,10 +17,8 @@ const createSuccess = function (response) {
 
   store.game = response.game
   console.log(store.game.cells)
-  // for (let i = 0; i < store.game.cells.length; i++) {
-  //   store.game.cells[i] = ''
-  // }
 }
+
 const createFailure = function () {
   $('#new-game').text('Create Game failed!')
   $('#new-game').show()
