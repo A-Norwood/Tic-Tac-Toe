@@ -55,7 +55,6 @@ const signOutSuccess = function () {
   $('#sign-up-content').hide()
   $('.message').hide()
   $('.game-content').hide()
-  console.log(store)
   // store.user = null
   // store.game = null
   // store.store = null

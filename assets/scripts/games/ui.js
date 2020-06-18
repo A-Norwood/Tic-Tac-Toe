@@ -4,7 +4,7 @@ const createSuccess = function (response) {
   $('.game-content').html('Create Game success!').fadeOut(10000)
   $('#new-game').addClass('success')
   $('.row').show()
-  $('.message').text('It is now X\'s turn')
+  $('.message').text('It is now player X\'s turn')
   $('#0').text('')
   $('#1').text('')
   $('#2').text('')

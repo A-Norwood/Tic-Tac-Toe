@@ -7,7 +7,8 @@ const store = require('../store.js')
 const onCreateGame = function (event) {
   // console.log(user.token)
   event.preventDefault()
-  // store = {}
+  // set currentplayer to always start at X
+  currentPlayer = 'X'
   api.createGame()
     .then(ui.createSuccess)
     .catch(ui.createFailure)
@@ -31,10 +32,10 @@ const onUpdateGame = function (event) {
     }
     if (currentPlayer === 'X') {
       currentPlayer = 'O'
-      $('.message').text('It is now player O\'s turn')
+      $('.message').text(`It is now player ${currentPlayer}'s' turn`)
     } else {
       currentPlayer = 'X'
-      $('.message').text('It is now player X\'s turn')
+      $('.message').text(`It is now player ${currentPlayer}'s turn`)
     }
 
     winner()
