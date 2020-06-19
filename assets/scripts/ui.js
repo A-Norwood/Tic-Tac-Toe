@@ -21,6 +21,7 @@ const signInSuccess = function (response) {
   $('.show').hide()
   $('#new-game').show()
   $('#sign-out-stuff').show()
+  $('.hide-signup').hide()
   store.user = response.user
 }
 
@@ -34,20 +35,20 @@ const changePwSuccess = function () {
   $('form').trigger('reset')
   $('#change-pw').text('Password changed successfully')
   $('#change-pw').removeClass()
-  $('#change-pw').addClass('success')
+  // $('#change-pw').addClass('success')
 }
 
 const changePwFailure = function () {
   $('form').trigger('reset')
   $('#change-pw').text('Password change failed')
   $('#change-pw').removeClass()
-  $('#change-pw').addClass('failure')
+  // $('#change-pw').addClass('failure')
 }
 
 const signOutSuccess = function () {
   $('#sign-out').text('Signed out successfully. Please sign in again to play.').fadeOut(6000)
   $('#sign-out').removeClass()
-  $('#sign-out').addClass('success')
+  // $('#sign-out').addClass('success')
   $('#new-game').addClass('hidden')
   $('#change-pw').addClass('hidden')
   $('.show').show()
@@ -64,7 +65,7 @@ const signOutSuccess = function () {
 const signOutFailure = function () {
   $('#sign-out').text('Signed Out Failed')
   $('#sign-out').removeClass()
-  $('#sign-out').addClass('failure')
+  // $('#sign-out').addClass('failure')
 }
 
 module.exports = {

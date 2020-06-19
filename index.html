@@ -15,6 +15,7 @@
       <h1>Tic-Tac-Toe</h1>
       <section>
         <div class="show">
+          <div class="hide-signup"></div>
           <h4>Sign Up:</h4>
         <form id="sign-up">
           <input placeholder="Enter Email" name="credentials[email]" type="email" required>
@@ -51,6 +52,7 @@
     </section>
 
     <section>
+      <!-- <div class=show-signout></div> -->
     <div id = sign-out-stuff class= hidden>
       <form id="sign-out">
       <button type="submit">Sign Out</button>
@@ -63,10 +65,12 @@
       <p class="game-content"></p>
    </form> 
 
-    <p class="message"></p>
-    <p class="invalid-move"></p>
-    <div class="row">
-    <p class="update-game"></p>
+   <p class="message"></p>
+   <p class="invalid-move"></p>
+   <p class="update-game"></p>
+
+  <section class="container">
+    <div class="row h-100 board">
       <div id=0 class="col-4 box" data-cell-index='0'></div>
       <div id=1 class="col-4 box" data-cell-index='1'></div>
       <div id=2 class="col-4 box" data-cell-index='2'></div>
@@ -77,6 +81,7 @@
       <div id=7 class="col-4 box" data-cell-index='7'></div>
       <div id=8 class="col-4 box" data-cell-index='8'></div>
    </div>
+ </section>
 
   </body>
 </html>
