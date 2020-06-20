@@ -7,6 +7,7 @@ const createSuccess = function (response) {
   $('.message').text('It is now player X\'s turn')
   $('.message').show()
   $('.invalid-move').hide()
+  // $('#change-pw').text('Password changed successfully').hide()
   $('#0').text('')
   $('#1').text('')
   $('#2').text('')

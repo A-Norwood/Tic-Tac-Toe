@@ -23,6 +23,7 @@ const signInSuccess = function (response) {
   $('#new-game').show()
   $('#sign-out-stuff').show()
   $('#sign-out').show()
+  $('#change-pw').show()
   $('#signout-message').text('Signed out successfully. Please sign in again to play.').hide()
   store.user = response.user
 }
@@ -35,20 +36,20 @@ const signInFailure = function (response) {
 
 const changePwSuccess = function () {
   $('form').trigger('reset')
-  $('#change-pw').text('Password changed successfully')
-  $('#change-pw').removeClass()
+  $('.change-pw-message').text('Password changed successfully')
 }
 
 const changePwFailure = function () {
   $('form').trigger('reset')
-  $('#change-pw').text('Password change failed')
-  $('#change-pw').removeClass()
+  $('.change-pw-message').text('Password change failed')
+  // $('#change-pw').removeClass()
 }
 
 const signOutSuccess = function () {
   $('#signout-message').text('Signed out successfully. Please sign in again to play.').show()
+  // $('#change-pw').text('Password changed successfully').hide()
   $('#new-game').addClass('hidden')
-  $('#change-pw').addClass('hidden')
+  $('#change-pw').hide()
   $('.show').show()
   $('.row').hide()
   $('#sign-up-content').hide()
@@ -56,6 +57,7 @@ const signOutSuccess = function () {
   $('.game-content').hide()
   $('.invalid-move').hide()
   $('#sign-out').hide()
+  $('.change-pw-message').hide()
   // store.user = null
   // store.game = null
   // store.store = null
