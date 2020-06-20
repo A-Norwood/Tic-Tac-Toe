@@ -5,6 +5,7 @@ const signUpSuccess = function (response) {
   $('form').trigger('reset')
   $('#sign-up-content').text('Sign up complete ' + response.user.email)
   $('#sign-up-content').show()
+  $('#signout-message').text('Signed out successfully. Please sign in again to play.').hide()
 }
 
 const signUpFailure = function () {
@@ -21,7 +22,8 @@ const signInSuccess = function (response) {
   $('.show').hide()
   $('#new-game').show()
   $('#sign-out-stuff').show()
-  $('.hide-signup').hide()
+  $('#sign-out').show()
+  $('#signout-message').text('Signed out successfully. Please sign in again to play.').hide()
   store.user = response.user
 }
 
@@ -35,20 +37,16 @@ const changePwSuccess = function () {
   $('form').trigger('reset')
   $('#change-pw').text('Password changed successfully')
   $('#change-pw').removeClass()
-  // $('#change-pw').addClass('success')
 }
 
 const changePwFailure = function () {
   $('form').trigger('reset')
   $('#change-pw').text('Password change failed')
   $('#change-pw').removeClass()
-  // $('#change-pw').addClass('failure')
 }
 
 const signOutSuccess = function () {
-  $('#sign-out').text('Signed out successfully. Please sign in again to play.').fadeOut(6000)
-  $('#sign-out').removeClass()
-  // $('#sign-out').addClass('success')
+  $('#signout-message').text('Signed out successfully. Please sign in again to play.').show()
   $('#new-game').addClass('hidden')
   $('#change-pw').addClass('hidden')
   $('.show').show()
@@ -56,6 +54,8 @@ const signOutSuccess = function () {
   $('#sign-up-content').hide()
   $('.message').hide()
   $('.game-content').hide()
+  $('.invalid-move').hide()
+  $('#sign-out').hide()
   // store.user = null
   // store.game = null
   // store.store = null
@@ -65,7 +65,7 @@ const signOutSuccess = function () {
 const signOutFailure = function () {
   $('#sign-out').text('Signed Out Failed')
   $('#sign-out').removeClass()
-  // $('#sign-out').addClass('failure')
+  $('.invalid-move').hide()
 }
 
 module.exports = {

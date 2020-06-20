@@ -40,6 +40,7 @@
   }
 }
 
+
 .conatiner {
   //set the whole board to take up 100% of browser height
   height: 100vh;
@@ -88,13 +89,21 @@ h1, h4 {
 
 }
 
-#sign-out {
+#sign-out-stuff {
   position: absolute;
   right: 0;
   top: 10px;
   font-size: 18px;
   font-weight: bold;
   color: #ff0000;
+}
+
+#signout-message {
+  margin: 20px 0;
+  font-size: 25px;
+  color: #EE82EE;
+  display: flex;
+  justify-content: center;
 }
 //
 

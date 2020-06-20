@@ -9,6 +9,7 @@ const onCreateGame = function (event) {
   event.preventDefault()
   // set currentplayer to always start at X
   currentPlayer = 'X'
+
   api.createGame()
     .then(ui.createSuccess)
     .catch(ui.createFailure)
@@ -21,7 +22,8 @@ const onUpdateGame = function (event) {
   console.log(store)
   if (store.game.over === false) {
     if (store.game.cells[event.target.id] === 'X' || store.game.cells[event.target.id] === 'O') {
-      return $('.invalid-move').text('Invalid Move!').fadeOut(4000)
+      // return $('.invalid-move').text('Invalid Move!').fadeOut(4000)
+      return $('.invalid-move').text('Invalid Move!').show()
     }
 
     // updates game cells using current index

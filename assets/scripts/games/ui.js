@@ -1,10 +1,12 @@
 const store = require('./../store')
 
 const createSuccess = function (response) {
-  $('.game-content').html('Create Game success!').fadeOut(10000)
+  $('.game-content').html('Create Game success!').show()
   // $('#new-game').addClass('success')
   $('.row').show()
   $('.message').text('It is now player X\'s turn')
+  $('.message').show()
+  $('.invalid-move').hide()
   $('#0').text('')
   $('#1').text('')
   $('#2').text('')
@@ -26,6 +28,8 @@ const createFailure = function () {
 
 const updateGameSuccess = function () {
   $('.updateGame').text('Show letter')
+  $('.invalid-move').hide()
+  $('.game-content').html('Create Game success!').hide()
 }
 
 const updateGameFailure = function () {
