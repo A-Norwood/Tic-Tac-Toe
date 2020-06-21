@@ -52,35 +52,35 @@ const winner = function () {
   if (store.game.cells[0] === store.game.cells[1] && store.game.cells[1] === store.game.cells[2] && store.game.cells[0] !== '') {
     store.game.over = true
     // console.log(store.game)
-    return $('.message').text('Winner is ' + store.game.cells[0])
+    return $('.message').text('Winner is ' + store.game.cells[0] + '!')
   } else if (store.game.cells[3] === store.game.cells[4] && store.game.cells[4] === store.game.cells[5] && store.game.cells[3] !== '') {
     store.game.over = true
     // console.log(store.game)
-    return $('.message').text('Winner is ' + store.game.cells[3])
+    return $('.message').text('Winner is ' + store.game.cells[3] + '!')
   } else if (store.game.cells[6] === store.game.cells[7] && store.game.cells[7] === store.game.cells[8] && store.game.cells[6] !== '') {
     store.game.over = true
     // console.log(store.game)
-    return $('.message').text('Winner is ' + store.game.cells[6])
+    return $('.message').text('Winner is ' + store.game.cells[6] + '!')
   } else if (store.game.cells[0] === store.game.cells[4] && store.game.cells[4] === store.game.cells[8] && store.game.cells[0] !== '') {
     store.game.over = true
     // console.log(store.game)
-    return $('.message').text('Winner is ' + store.game.cells[0])
+    return $('.message').text('Winner is ' + store.game.cells[0] + '!')
   } else if (store.game.cells[2] === store.game.cells[4] && store.game.cells[4] === store.game.cells[6] && store.game.cells[2] !== '') {
     store.game.over = true
     // console.log(store.game)
-    return $('.message').text('Winner is ' + store.game.cells[2])
+    return $('.message').text('Winner is ' + store.game.cells[2] + '!')
   } else if (store.game.cells[0] === store.game.cells[3] && store.game.cells[3] === store.game.cells[6] && store.game.cells[0] !== '') {
     store.game.over = true
     // console.log(store.game)
-    return $('.message').text('Winner is ' + store.game.cells[0])
+    return $('.message').text('Winner is ' + store.game.cells[0] + '!')
   } else if (store.game.cells[1] === store.game.cells[4] && store.game.cells[4] === store.game.cells[7] && store.game.cells[1] !== '') {
     store.game.over = true
     // console.log(store.game)
-    return $('.message').text('Winner is ' + store.game.cells[1])
+    return $('.message').text('Winner is ' + store.game.cells[1] + '!')
   } else if (store.game.cells[2] === store.game.cells[5] && store.game.cells[5] === store.game.cells[8] && store.game.cells[2] !== '') {
     store.game.over = true
     // console.log(store.game)
-    return $('.message').text('Winner is ' + store.game.cells[2])
+    return $('.message').text('Winner is ' + store.game.cells[2] + '!')
   }
   console.log(store.game)
   let isATie = true

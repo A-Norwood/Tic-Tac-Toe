@@ -11,13 +11,24 @@
 }
 
 .message {
+  color: #ac00e6;
   display: flex;
   justify-content: center;
+  font-size: 25px;
+}
+
+.game-content {
+  color: #ac00e6;
+  display: flex;
+  justify-content: center;
+  font-size: 25px;
 }
 
 .invalid-move {
   display: flex;
   justify-content: center;
+  color: #ff0000;
+  font-size: 22px;
 }
 
 .box {
@@ -80,13 +91,16 @@ h1, h4 {
   margin: 10px;
 }
 
-.invalid-move {
-  color: #ff0000;
-}
-
 #change-pw {
   text-align: center;
+}
 
+.change-pw-message {
+  margin: 20px 0;
+  font-size: 18px;
+  color: #EE82EE;
+  display: flex;
+  justify-content: center;
 }
 
 #sign-out-stuff {
