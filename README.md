@@ -1,6 +1,6 @@
 [![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
 
-### Tic-Tac-Toe
+# Tic-Tac-Toe
 This is a game that uses symbols 'X' or 'O' on a 9 square grid. A winner is determined by getting 3 of the same symbols in a row either horizontally, vertically, or diagonally. My game was created as my first project for General Assembly.
 
 ## Link to deployed game:
@@ -21,14 +21,12 @@ I tried to follow suggested schedule provided by General Assembly. I first start
 I am a user and I want to sign out.
 
 ## Technologies Used:
-HTML. CSS. Javascript. Required API. JQuery. Ajax requests. JSON format. Github.
+HTML. CSS. Bootstrap. Javascript. Required API. JQuery. Ajax requests. Github.
 
 
 ## Unsolved Problems:
-When a user signs out, then signs in again, sign-out does not show, messages do not show. Need to fix this bug.
-I need to be able to tell user the total games played for their sign in and add game stats button.
-I would like to find ways to condense my code (CSS for example), and simplify the written code overall. Follow DRY coding.
+Still need to be able to retrieve game stats.
 
-Wireframes:
+## Wireframes:
 [First Page Wireframe](https://imgur.com/GDPr09L)
-[Secong Page Wireframe](https://imgur.com/vrY0fwa)
+[Second Page Wireframe](https://imgur.com/vrY0fwa)
