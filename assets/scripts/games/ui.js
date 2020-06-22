@@ -38,9 +38,18 @@ const updateGameFailure = function () {
   $('.updateGame').addClass('failure')
 }
 
+const onGetGamesSuccess = function (response) {
+  $('.message').text('Here are your total games: ' + response.games.length)
+}
+
+const onGetGamesFailure = function () {
+  $('.message').text('Unable to retrieve total games')
+}
 module.exports = {
   createSuccess,
   createFailure,
   updateGameSuccess,
-  updateGameFailure
+  updateGameFailure,
+  onGetGamesSuccess,
+  onGetGamesFailure
 }

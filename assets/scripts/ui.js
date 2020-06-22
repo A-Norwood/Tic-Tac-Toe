@@ -24,6 +24,7 @@ const signInSuccess = function (response) {
   $('#sign-out-stuff').show()
   $('#sign-out').show()
   $('#change-pw').show()
+  $('#stats').show()
   $('#signout-message').text('Signed out successfully. Please sign in again to play.').hide()
   store.user = response.user
 }
@@ -58,6 +59,7 @@ const signOutSuccess = function () {
   $('.invalid-move').hide()
   $('#sign-out').hide()
   $('.change-pw-message').hide()
+  $('#stats').hide()
   // store.user = null
   // store.game = null
   // store.store = null

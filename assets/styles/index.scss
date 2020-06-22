@@ -105,7 +105,7 @@ h1, h4 {
 
 #sign-out-stuff {
   position: absolute;
-  right: 0;
+  right: 15px;
   top: 10px;
   font-size: 18px;
   font-weight: bold;
@@ -127,4 +127,8 @@ h1, h4 {
   color: #EE82EE;
   display: flex;
   justify-content: center;
+}
+
+#stats {
+  text-align: center;
 }
