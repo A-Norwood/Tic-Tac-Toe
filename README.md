@@ -25,7 +25,8 @@ HTML. CSS. Bootstrap. Javascript. Required API. JQuery. Ajax requests. Github.
 
 
 ## Unsolved Problems:
-Still need to be able to retrieve game stats.
+Once signing out then signing back in, cannot retrieve game stats until new game created. Working on resolving.
+For a future version, would like to add styling and keep more DRY code overall.
 
 ## Wireframes:
 [First Page Wireframe](https://imgur.com/GDPr09L)
